@@ -4,7 +4,7 @@ export default {
   getResume: function () {
     return axios
       .get(
-        `${process.env.REACT_APP_RESUME_URL}/api/download/Resume-Sachin-Jhaveri.pdf`
+        `${process.env.REACT_APP_LINK}/api/download/Resume-Sachin-Jhaveri.pdf`
       )
       .then((data) => console.log(data))
       .catch((err) => console.error(err));
@@ -12,7 +12,7 @@ export default {
 
   getTechSkills: async () => {
     let techskills = await axios
-      .get(`${process.env.REACT_APP_ALL_TECHSKILLS}`)
+      .get(`${process.env.REACT_APP_LINK}/api/techskills/`)
       .then((res) => res.data.data[0])
       .catch((err) => console.error(err));
     return techskills;
@@ -20,7 +20,7 @@ export default {
 
   getFrontEndSkills: async () => {
     let frontend = await axios
-      .get(`${process.env.REACT_APP_FRONTEND_SKILLS}`)
+      .get(`${process.env.REACT_APP_LINK}/api/techskills/frontEnd`)
       .then((res) => res.data.data)
       .catch((err) => console.error(err));
     return frontend;
@@ -28,28 +28,28 @@ export default {
 
   getBackEndSkills: () => {
     return axios
-      .get(`${process.env.REACT_APP_BACKEND_SKILLS}`)
+      .get(`${process.env.REACT_APP_LINK}/api/techskills/backEnd`)
       .then((res) => res.data.data)
       .catch((err) => console.error(err));
   },
 
   getDatabaseSkills: () => {
     return axios
-      .get(`${process.env.REACT_APP_DATABASE_SKILLS}`)
+      .get(`${process.env.REACT_APP_LINK}/api/techskills/database`)
       .then((res) => res.data.data)
       .catch((err) => console.error(err));
   },
 
   getProgrammingSkills: () => {
     return axios
-      .get(`${process.env.REACT_APP_PROGRAMMING_SKILLS}`)
+      .get(`${process.env.REACT_APP_LINK}/api/techskills/programming`)
       .then((res) => res.data.data)
       .catch((err) => console.error(err));
   },
 
   sendEmail: function (req, res) {
     return axios
-      .post(`${process.env.REACT_APP_SEND_EMAIL}`, {
+      .post(`${process.env.REACT_APP_LINK}/api/sendEmail`, {
         req,
       })
       .then((res) => res)
