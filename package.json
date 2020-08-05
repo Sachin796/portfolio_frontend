@@ -5,6 +5,7 @@
   "proxy": "https://portfoliowebsitebackend.herokuapp.com",
   "dependencies": {
     "@testing-library/react": "^10.4.7",
+    "axios": "^0.19.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-ga": "^2.7.0",
