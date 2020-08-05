@@ -15,6 +15,7 @@
     "react-typed": "^1.2.0"
   },
   "scripts": {
+    "build": "react-scripts build",
     "start:dev": "sh -ac '. ./.env; react-scripts start';",
     "build:dev": "sh -ac '. ./.env; react-scripts build';",
     "build:staging": "sh -ac '. ./.env.staging; react-scripts build';",
