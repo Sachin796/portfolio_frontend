@@ -1,0 +1,36 @@
+{
+  "name": "mern",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://portfoliowebsitebackend.herokuapp.com",
+  "dependencies": {
+    "@testing-library/react": "^10.4.7",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-ga": "^2.7.0",
+    "react-particles-js": "^2.7.0",
+    "react-scripts": "^3.3.0",
+    "react-social-icons": "^4.1.0",
+    "react-test-renderer": "^16.13.1",
+    "react-typed": "^1.2.0"
+  },
+  "scripts": {
+    "start:dev": "sh -ac '. ./.env; react-scripts start';",
+    "build:dev": "sh -ac '. ./.env; react-scripts build';",
+    "build:staging": "sh -ac '. ./.env.staging; react-scripts build';",
+    "build:production": "sh -ac '. ./.env.production; react-scripts build';",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "fetch-mock": "^9.10.5",
+    "jest": "^24.9.0"
+  }
+}

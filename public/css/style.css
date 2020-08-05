@@ -1,0 +1,190 @@
+#introDiv {
+  background-color: blueviolet;
+  height: 100vh;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  width: 100%;
+}
+
+#particle-js {
+  height: 400px;
+}
+
+h2 {
+  margin: 0;
+}
+
+#name {
+  padding-top: 100px;
+}
+
+#description,
+#links {
+  margin-top: 50px;
+}
+
+.typed-cursor {
+  opacity: 0 !important;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter:before,
+.fa-github:before,
+.fa-linkedin:before,
+.fa-envelope:before {
+  color: white;
+}
+
+.fa-twitter:hover,
+.fa-github:hover,
+.fa-linkedin:hover {
+  color: rgb(251, 255, 0);
+}
+
+.page-footer {
+  padding-top: 0px !important;
+  color: #fff;
+  background-color: blueviolet !important;
+}
+
+#cardRow {
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aboutRow {
+  height: 95vh;
+}
+
+#contactrow {
+}
+
+#resumebtn {
+  border: 0px;
+  display: block;
+  background: black;
+  color: white;
+  text-align: center;
+  border: 2px solid #3498db;
+  margin: auto;
+  width: 100px;
+  border-radius: 24px;
+  padding: 6px 12px;
+}
+
+#project1img {
+  height: fit-content;
+}
+
+#project1 {
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+}
+
+.project1div {
+  height: auto;
+  width: 100%;
+}
+
+.icondimensions {
+  margin-right: 35px;
+  margin-bottom: 25px;
+  height: 90px;
+  width: 90px;
+}
+
+figcaption {
+  margin-bottom: 30px;
+}
+
+h5 {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  color: blueviolet;
+}
+
+#justcolor {
+  color: blueviolet;
+}
+
+#techskills {
+  padding-top: 30px;
+  color: blueviolet;
+  margin-bottom: 45px;
+}
+
+#projimg {
+  border-radius: 150px;
+}
+
+#projectRow {
+  height: auto;
+}
+
+/* mediaquery for height auto */
+#contactMeContainer {
+  /* display: flex;
+  background-color: bisque; */
+  margin-bottom: 0px !important;
+}
+
+#b {
+  height: 100px;
+}
+
+#ContactContainer {
+  margin-top: 10px;
+  border: 2px solid black;
+  width: 100%;
+}
+
+#contactviaForm {
+  width: 50%;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+image {
+  border-radius: 50% !important;
+}
+
+#contactviaSocialMedia {
+  border: 1px solid black;
+  width: 50%;
+  margin: 5px;
+}
+
+@media only screen and (min-width: 993px) {
+  .row .col.l6 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+nav {
+  background-color: blueviolet;
+  box-shadow: none !important;
+}
