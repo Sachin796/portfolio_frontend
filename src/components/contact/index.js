@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Recaptcha from "react-recaptcha";
 import API from "../../utils/index";
 
 class Contact extends Component {
@@ -6,9 +7,20 @@ class Contact extends Component {
     super();
     this.state = {
       email: "",
+      captchaVerified: false,
     };
     this.sendEmail = this.sendEmail.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
   }
+
+  recaptchaLoaded = () => {};
+
+  verifyCallback = (response) => {
+    this.setState({
+      captchaVerified: true,
+    });
+  };
 
   updateStateData = (event) => {
     event.preventDefault();
@@ -19,12 +31,16 @@ class Contact extends Component {
 
   sendEmail = async (event) => {
     event.preventDefault();
-    const response = await API.sendEmail(this.state);
-    if (response.status === 200) {
-      alert("Thank you for the email");
-      console.log((document.getElementById("email").value = ""));
+    if (this.state.captchaVerified) {
+      const response = await API.sendEmail(this.state);
+      if (response.status === 200) {
+        alert("Thank you for the email");
+        document.getElementById("email").value = "";
+      } else {
+        alert("Error");
+      }
     } else {
-      alert("Error");
+      alert("Please verify captcha");
     }
   };
 
@@ -94,7 +110,15 @@ class Contact extends Component {
                   onKeyUp={this.updateStateData}
                 />
               </div>
+              <Recaptcha
+                sitekey={process.env.REACT_APP_SITE_KEY}
+                render="explicit"
+                onloadCallback={this.recaptchaLoaded}
+                verifyCallback={this.verifyCallback}
+              />
+              ,
               <button
+                id="submitemail"
                 type="submit"
                 onClick={(e) => {
                   this.sendEmail(e);

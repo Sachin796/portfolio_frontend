@@ -4,7 +4,7 @@ export const frontendimages = [
   "./images/java-script.svg",
   "./images/bootstrap.svg",
   "./images/react.svg",
-  "./images/sass.svg"
+  "./images/sass.svg",
 ];
 
 export const backendimages = ["./images/nodejs.svg", "./images/expressjs.svg"];
@@ -13,7 +13,7 @@ export const databasedeploy = [
   "./images/mysql.svg",
   "./images/mongodb.svg",
   "./images/heroku.svg",
-  "./images/netlify.png"
+  "./images/netlify.png",
 ];
 
 export const proglanguages = ["./images/java.svg", "./images/php.svg"];
@@ -24,7 +24,7 @@ export const frontendfigcation = [
   "JAVASCRIPT",
   "BOOTSTRAP",
   "REACT",
-  "SASS"
+  "SASS",
 ];
 
 export const backendfigcation = ["NODE", "EXPRESS"];
@@ -41,5 +41,5 @@ export default {
   databasedeploy,
   databasefigcation,
   proglanguages,
-  programminglangfigcaption
+  programminglangfigcaption,
 };

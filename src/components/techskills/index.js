@@ -45,8 +45,8 @@ class Techskills extends Component {
             <div style={{ width: "100%" }}>
               <h5>FRONT END TECHNOLOGIES</h5>
               <div className="" style={{ height: "auto" }}>
-                <FrontEnd />
-                {/* {frontendimages.map((imagesName, index) => {
+                {/* <FrontEnd /> */}
+                {frontendimages.map((imagesName, index) => {
                   return (
                     <TechTemplate
                       id={imagesName}
@@ -55,7 +55,7 @@ class Techskills extends Component {
                       figcaption={frontendfigcation[index]}
                     ></TechTemplate>
                   );
-                })} */}
+                })}
               </div>
             </div>
             <div>
@@ -63,8 +63,8 @@ class Techskills extends Component {
               <div className="" style={{ height: "auto" }}>
                 {/*  */}
                 <fig className="col l4 m12 s12"></fig>
-                <BackEnd />
-                {/* {backendimages.map((imagesName, index) => {
+                {/* <BackEnd /> */}
+                {backendimages.map((imagesName, index) => {
                   return (
                     <TechTemplate
                       id={imagesName}
@@ -73,7 +73,7 @@ class Techskills extends Component {
                       figcaption={backendfigcation[index]}
                     ></TechTemplate>
                   );
-                })} */}
+                })}
                 <fig className="col l4 m12 s12"></fig>
               </div>
             </div>
@@ -82,9 +82,9 @@ class Techskills extends Component {
               <div className="col l12 m12 s12" style={{ height: "auto" }}>
                 {/*  */}
                 <fig className="col l2 m12 s12"></fig>
-                <Database />
+                {/* <Database /> */}
 
-                {/* {databasedeploy.map((imagesName, index) => {
+                {databasedeploy.map((imagesName, index) => {
                   return (
                     <TechTemplate
                       id={imagesName}
@@ -93,7 +93,7 @@ class Techskills extends Component {
                       figcaption={databasefigcation[index]}
                     ></TechTemplate>
                   );
-                })} */}
+                })}
                 <fig className="col l4 m12 s12"></fig>
               </div>
             </div>
@@ -102,8 +102,8 @@ class Techskills extends Component {
               <div className="col l12 m12 s12" style={{ height: "auto" }}>
                 {/*  */}
                 <fig className="col l4 m12 s12"></fig>
-                <Programming />
-                {/* {proglanguages.map((imagesName, index) => {
+                {/* <Programming /> */}
+                {proglanguages.map((imagesName, index) => {
                   return (
                     <TechTemplate
                       id={imagesName}
@@ -112,7 +112,7 @@ class Techskills extends Component {
                       figcaption={programminglangfigcaption[index]}
                     ></TechTemplate>
                   );
-                })} */}
+                })}
                 <fig className="col l4 m12 s12"></fig>
               </div>
             </div>
