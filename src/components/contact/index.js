@@ -78,6 +78,12 @@ class Contact extends Component {
           <div className="col l6 m6 s12">
             <form method="POST">
               <div className="form-group">
+                <label class="sr-only" for="name">
+                  Name:
+                </label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div className="form-group">
                 <label class="sr-only" for="email">
                   Email address:
                 </label>
