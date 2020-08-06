@@ -14,7 +14,6 @@ class FrontEnd extends Component {
   render() {
     return (
       <>
-        <h3>FrontEnd Component</h3>
         {this.state.data
           ? this.state.data.map((data) => {
               return (
