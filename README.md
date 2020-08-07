@@ -32,27 +32,27 @@ http://portfoliowebsitereacthosting.s3-website-us-east-1.amazonaws.com/
 
 - ### Development
 
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/css.svg" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/html-5.svg" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/java-script.svg" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/bootstrap.svg" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/react.svg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/css.svg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/html-5.svg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/java-script.svg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/bootstrap.svg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/react.svg" width="100" height="100">
 
 - ### Testing
 
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/jest.png" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/babel.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/jest.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/babel.png" width="100" height="100">
 
 - ### Deployment
 
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/s3.jpg" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/codepipeline.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/s3.jpg" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/codepipeline.png" width="100" height="100">
 
 - ### Miscellaneous
 
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/recaptcha.png" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/sendgrid.png" width="100" height="100">
-<img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/circleci.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/recaptcha.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/sendgrid.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/circleci.png" width="100" height="100">
 
 ## Getting Started
 
