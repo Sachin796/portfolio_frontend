@@ -57,7 +57,7 @@ class Contact extends Component {
           }}
         >
           <div className="col l6 m6 s12">
-            <div style={{ height: "auto" }}>
+            <div className="col l12 m12 s12" style={{ height: "auto" }}>
               <h4
                 id="justcolor"
                 className="center"
@@ -92,43 +92,63 @@ class Contact extends Component {
             </div>
           </div>
           <div className="col l6 m6 s12">
-            <form method="POST">
-              <div className="form-group">
-                <label class="sr-only" for="name">
-                  Name:
-                </label>
-                <input type="text" class="form-control" id="name" />
-              </div>
-              <div className="form-group">
-                <label class="sr-only" for="email">
-                  Email address:
-                </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  onKeyUp={this.updateStateData}
-                />
-              </div>
-              <Recaptcha
-                sitekey={process.env.REACT_APP_SITE_KEY}
-                render="explicit"
-                onloadCallback={this.recaptchaLoaded}
-                verifyCallback={this.verifyCallback}
-              />
-              ,
-              <button
-                id="submitemail"
-                type="submit"
-                onClick={(e) => {
-                  this.sendEmail(e);
-                }}
-                target="_blank"
-                class="btn btn-default"
-              >
-                Submit
-              </button>
-            </form>
+            <div className="col l1 m1"></div>
+            <div className="col l8 m8 s12">
+              <form method="POST">
+                <div className="form-group">
+                  <label class="sr-only" for="name">
+                    Name:
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="form-group">
+                  <label class="sr-only" for="email">
+                    Email address:
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    onKeyUp={this.updateStateData}
+                    placeholder="Email"
+                  />
+                </div>
+                <div className="form-group">
+                  <label class="sr-only" for="email"></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="comment"
+                    placeholder="Comments"
+                  />
+                </div>
+                <div style={{ margin: "2vh 20%" }}>
+                  <Recaptcha
+                    sitekey={process.env.REACT_APP_SITE_KEY}
+                    render="explicit"
+                    onloadCallback={this.recaptchaLoaded}
+                    verifyCallback={this.verifyCallback}
+                  />
+                </div>
+                <button
+                  id="submitemail"
+                  type="submit"
+                  onClick={(e) => {
+                    this.sendEmail(e);
+                  }}
+                  target="_blank"
+                  class="btn btn-default"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+            <div className="col l1 m1"></div>
           </div>
         </div>
       </>

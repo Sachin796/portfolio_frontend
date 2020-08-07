@@ -10,7 +10,7 @@ function Links() {
           className="fa fa-github"
         ></a>
         <a
-          href="linkedin.com/in/sachin-javeri-42436280"
+          href="https://www.linkedin.com/in/sachin-javeri-42436280/"
           target="_blank"
           className="fa fa-linkedin"
         ></a>
