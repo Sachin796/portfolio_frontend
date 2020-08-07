@@ -21,7 +21,7 @@
     "build:dev": "sh -ac '. ./.env; react-scripts build';",
     "build:staging": "sh -ac '. ./.env.staging; react-scripts build';",
     "build:production": "sh -ac '. ./.env.production; react-scripts build';",
-    "test": "jest --watch",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "browserslist": [
