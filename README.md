@@ -40,15 +40,15 @@ http://portfoliowebsitereacthosting.s3-website-us-east-1.amazonaws.com/
 
 - ### Testing
 
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/jest.png" width="200" height="200">
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/babel.png" width="200" height="200">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/jest.png" width="200" height="150">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/babel.png" width="200" height="150">
 
 - ### Deployment and CD
 
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/s3.jpg" width="200" height="200">
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/codepipeline.png" width="200" height="200">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/s3.jpg" width="250" height="200">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/codepipeline.png" width="250" height="200">
 
-- ### CI Miscellaneous
+- ### CI and Miscellaneous
 
    <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/recaptcha.png" width="100" height="100">
    <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/sendgrid.png" width="100" height="100">
@@ -71,4 +71,5 @@ http://portfoliowebsitereacthosting.s3-website-us-east-1.amazonaws.com/
 4. Start the application using npm run start:dev
 
 5. Test the application by running the command npm test
-   See the [portfolio backend](https://github.com/Sachin796/portfolio_backend)
+
+See the [portfolio backend](https://github.com/Sachin796/portfolio_backend)
