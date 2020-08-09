@@ -6,15 +6,22 @@ import Programming from "./programming";
 
 import {
   frontendimages,
+  frontendimages2,
   frontendfigcation,
+  frontendfigcation2,
   backendimages,
   backendfigcation,
-  databasedeploy,
+  database,
   databasefigcation,
-  proglanguages,
-  programminglangfigcaption,
+  deployment,
+  deploymentfigcaption,
+  aws1,
+  aws2,
+  aws1figcaption,
+  aws2figcaption,
 } from "./images";
 import TechTemplate from "../technologiesTemplate/index";
+import CommonTemplate from "./commonTemplate";
 class Techskills extends Component {
   constructor() {
     super();
@@ -39,6 +46,7 @@ class Techskills extends Component {
             {/* <FrontEnd /> */}
             <div style={{ width: "100%" }}>
               <h5>FRONT END TECHNOLOGIES</h5>
+              <div className="col l1 m1 s1" style={{ height: "auto" }}></div>
               <div className="" style={{ height: "auto" }}>
                 {frontendimages.map((imagesName, index) => {
                   return (
@@ -51,60 +59,59 @@ class Techskills extends Component {
                   );
                 })}
               </div>
+              <CommonTemplate
+                marginTop="7vh"
+                imgType={frontendimages2}
+                figcaptionType={frontendfigcation2}
+                classname="col l2 m12 s12"
+              />
             </div>
             <div>
               {/* <BackEnd /> */}
               <h5 className="col l12 m12 s12">BACK END TECHNOLOGIES</h5>
-              <div className="" style={{ height: "auto" }}>
-                <fig className="col l4 m12 s12"></fig>
-                {backendimages.map((imagesName, index) => {
-                  return (
-                    <TechTemplate
-                      id={imagesName}
-                      className="col l2 m12 s12"
-                      src={imagesName}
-                      figcaption={backendfigcation[index]}
-                    ></TechTemplate>
-                  );
-                })}
-                <fig className="col l4 m12 s12"></fig>
-              </div>
+              <CommonTemplate
+                marginTop="0px"
+                imgType={backendimages}
+                figcaptionType={backendfigcation}
+                classname="col l2 m12 s12"
+              />
             </div>
             <div>
               {/* <Database /> */}
-              <h5 className="col l12 m12 s12">DATABASE AND DEPLOYMENT</h5>
-              <div className="col l12 m12 s12" style={{ height: "auto" }}>
-                <fig className="col l2 m12 s12"></fig>
-                {databasedeploy.map((imagesName, index) => {
-                  return (
-                    <TechTemplate
-                      id={imagesName}
-                      className="col l2 m12 s12"
-                      src={imagesName}
-                      figcaption={databasefigcation[index]}
-                    ></TechTemplate>
-                  );
-                })}
-                <fig className="col l4 m12 s12"></fig>
-              </div>
+              <h5 className="col l12 m12 s12">DATABASE</h5>
+              <CommonTemplate
+                marginTop="0px"
+                imgType={database}
+                figcaptionType={databasefigcation}
+                classname="col l2 m12 s12"
+              />
             </div>
-            {/* <Programming /> */}
+            {/* <Deployment /> */}
             <div>
-              <h5 className="col l12 m12 s12">PROGRAMMING LANGUAGES</h5>
-              <div className="col l12 m12 s12" style={{ height: "auto" }}>
-                <fig className="col l4 m12 s12"></fig>
-                {proglanguages.map((imagesName, index) => {
-                  return (
-                    <TechTemplate
-                      id={imagesName}
-                      className="col l2 m12 s12"
-                      src={imagesName}
-                      figcaption={programminglangfigcaption[index]}
-                    ></TechTemplate>
-                  );
-                })}
-                <fig className="col l4 m12 s12"></fig>
-              </div>
+              <h5 className="col l12 m12 s12">DEPLOYMENT</h5>
+              <CommonTemplate
+                marginTop="0px"
+                imgType={deployment}
+                figcaptionType={deploymentfigcaption}
+                classname="col l4 m12 s12"
+              />
+            </div>
+
+            {/* AWS */}
+            <div>
+              <h5 className="col l12 m12 s12">AWS</h5>
+              <CommonTemplate
+                marginTop="0px"
+                imgType={aws1}
+                figcaptionType={aws1figcaption}
+                classname="col l1 m12 s12"
+              />
+              <CommonTemplate
+                marginTop="7vh"
+                imgType={aws2}
+                figcaptionType={aws2figcaption}
+                classname="col l4 m12 s12"
+              />
             </div>
           </div>
         </div>

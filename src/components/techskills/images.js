@@ -1,45 +1,76 @@
 export const frontendimages = [
-  "./images/css.svg",
   "./images/html-5.svg",
+  "./images/css.svg",
   "./images/java-script.svg",
-  "./images/bootstrap.svg",
   "./images/react.svg",
+  "./images/vue.svg",
+];
+
+export const frontendimages2 = [
+  "./images/svelte.svg",
+  "./images/bootstrap.svg",
+  "./images/materialize.svg",
   "./images/sass.svg",
 ];
 
-export const backendimages = ["./images/nodejs.svg", "./images/expressjs.svg"];
-
-export const databasedeploy = [
-  "./images/mysql.svg",
-  "./images/mongodb.svg",
-  "./images/heroku.svg",
-  "./images/netlify.png",
+export const backendimages = [
+  "./images/nodejs.svg",
+  "./images/expressjs.svg",
+  "./images/java.svg",
+  "./images/laravel.svg",
 ];
 
-export const proglanguages = ["./images/java.svg", "./images/php.svg"];
+export const database = [
+  "./images/mysql.svg",
+  "./images/mongodb.svg",
+  "./images/postgresql.svg",
+  "./images/firebase.svg",
+];
 
-export const frontendfigcation = [
-  "CSS",
-  "HTML5",
-  "JAVASCRIPT",
+export const deployment = ["./images/heroku.svg", "./images/netlify.png"];
+
+export const aws1 = [
+  "./images/amazon_ec2.svg",
+  "./images/amazon_rds.svg",
+  "./images/amazon_s3.svg",
+  "./images/amazon_vpc.svg",
+  "./images/aws_cloudformation.svg",
+];
+
+export const aws2 = ["./images/aws_codepipeline.svg", "./images/aws_iam.svg"];
+
+export const aws1figcaption = ["EC2", "RDS", "S3", "VPC", "CLOUDFORMATION"];
+
+export const aws2figcaption = ["CODEPIPELINE", "IAM"];
+
+export const frontendfigcation = ["HTML5", "CSS", "JAVASCRIPT", "REACT", "VUE"];
+
+export const frontendfigcation2 = [
+  "SVELTE",
   "BOOTSTRAP",
-  "REACT",
+  "MATERIALIZE",
   "SASS",
 ];
 
-export const backendfigcation = ["NODE", "EXPRESS"];
+export const backendfigcation = ["NODE", "EXPRESS", "JAVA", "LARAVEL"];
 
-export const databasefigcation = ["MySQL", "MongoDB", "HEROKU", "NETLIFY"];
+export const databasefigcation = ["MySQL", "MongoDB", "PostgreSQL", "FIREBASE"];
 
-export const programminglangfigcaption = ["JAVA", "PHP"];
+export const deploymentfigcaption = ["HEROKU", "NETLIFY"];
 
 export default {
   frontendimages,
+  frontendimages2,
   frontendfigcation,
+  frontendfigcation2,
   backendimages,
   backendfigcation,
-  databasedeploy,
+  database,
   databasefigcation,
-  proglanguages,
-  programminglangfigcaption,
+  deployment,
+  deploymentfigcaption,
+  aws1,
+  aws2,
+  aws1figcaption,
+  aws2figcaption,
 };

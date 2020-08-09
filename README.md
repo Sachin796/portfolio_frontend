@@ -50,9 +50,10 @@ http://portfoliowebsitereacthosting.s3-website-us-east-1.amazonaws.com/
 
 - ### CI and Miscellaneous
 
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/recaptcha.png" width="100" height="100">
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/sendgrid.png" width="100" height="100">
-   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/circleci.png" width="100" height="100">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/recaptcha.png" width="150" height="150">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/docker.svg" width="150" height="150">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/sendgrid.png" width="150" height="150">
+   <img src="https://github.com/Sachin796/portfolio_frontend/blob/master/public/images/circleci.svg" width="150" height="150">
 
 ## Getting Started
 
