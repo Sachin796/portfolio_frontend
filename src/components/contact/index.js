@@ -1,22 +1,30 @@
 import React, { Component } from "react";
-import Recaptcha from "react-recaptcha";
+import swal from "sweetalert";
+import Captcha from "./captcha";
 import API from "../../utils/index";
-
+import Button from "./button";
+import Input from "./input";
+import Details from "./details";
 class Contact extends Component {
   constructor() {
     super();
     this.state = {
       email: "",
+      name: "",
+      comment: "",
       captchaVerified: false,
     };
     this.sendEmail = this.sendEmail.bind(this);
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
+    this.clearFields = this.clearFields.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
   }
 
-  recaptchaLoaded = () => {};
+  recaptchaLoaded = () => {
+    console.log("Recaptcha loaded");
+  };
 
-  verifyCallback = (response) => {
+  verifyCallback = () => {
     this.setState({
       captchaVerified: true,
     });
@@ -24,23 +32,58 @@ class Contact extends Component {
 
   updateStateData = (event) => {
     event.preventDefault();
-    this.setState({
-      email: event.target.value,
-    });
+    if (event.target.id === "email") {
+      this.setState({
+        email: event.target.value,
+      });
+    } else if (event.target.id === "username") {
+      this.setState({
+        name: event.target.value,
+      });
+    } else if (event.target.id === "comment") {
+      this.setState({
+        comment: event.target.value,
+      });
+    }
   };
+
+  clearFields() {
+    this.setState({
+      email: "",
+      name: "",
+      comment: "",
+      captchaVerified: false,
+    });
+    document.getElementById("username").value = "";
+    document.getElementById("comment").value = "";
+    document.getElementById("email").value = "";
+  }
 
   sendEmail = async (event) => {
     event.preventDefault();
-    if (this.state.captchaVerified) {
-      const response = await API.sendEmail(this.state);
-      if (response.status === 200) {
-        alert("Thank you for the email");
-        document.getElementById("email").value = "";
+    if (
+      this.state.comment != "" &&
+      this.state.email != "" &&
+      this.state.name != ""
+    ) {
+      if (this.state.captchaVerified) {
+        const response = await API.sendEmail(this.state);
+        if (response.status === 200) {
+          swal("Thanks!", "Mail sent sucessfully !", "success");
+          this.clearFields();
+        } else {
+          swal(
+            "Oops!",
+            "Error with service... Please refresh the page.",
+            "error"
+          );
+        }
       } else {
-        alert("Error");
+        swal("Oops!", "Please complete the captcha to proceed", "warning");
       }
     } else {
-      alert("Please verify captcha");
+      swal("Empty Input!", "Please fill all details", "error");
+      this.clearFields();
     }
   };
 
@@ -67,85 +110,62 @@ class Contact extends Component {
               </h4>
               <hr style={{ width: "7%", marginBottom: "15px" }}></hr>
             </div>
-
-            <div className="col l12 m12 s12 ">
-              <p>Email</p>
-              <p>
-                <a href="#">sachinjaveri.2010@gmail.com</a>
-              </p>
-            </div>
-
-            {/* Contact */}
+            <Details
+              classname="col l12 m12 s12"
+              text="Email"
+              link="#"
+              link_text="sachinjaveri.2010@gmail.com"
+            />
             <div className="col l12 m12 s12 ">
               <p>Phone</p>
               <p>416-836-3359</p>
             </div>
-
-            {/* Linkedln */}
-            <div className="col l12 m12 s12 ">
-              <p>Linkedln</p>
-              <p>
-                <a href="https://www.linkedin.com/in/sachin-javeri-42436280">
-                  https://www.linkedin.com/in/sachin-javeri-42436280
-                </a>
-              </p>
-            </div>
+            <Details
+              classname="col l12 m12 s12"
+              text="LinkedIn"
+              link="https://www.linkedin.com/in/sachin-javeri-42436280"
+              link_text="https://www.linkedin.com/in/sachin-javeri-42436280"
+            />
           </div>
           <div className="col l6 m6 s12">
             <div className="col l1 m1"></div>
             <div className="col l8 m8 s12">
-              <form method="POST">
-                <div className="form-group">
-                  <label class="sr-only" for="name">
-                    Name:
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label class="sr-only" for="email">
-                    Email address:
-                  </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    onKeyUp={this.updateStateData}
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="form-group">
-                  <label class="sr-only" for="email"></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="comment"
-                    placeholder="Comments"
-                  />
-                </div>
-                <div style={{ margin: "2vh 20%" }}>
-                  <Recaptcha
-                    sitekey={process.env.REACT_APP_SITE_KEY}
-                    render="explicit"
-                    onloadCallback={this.recaptchaLoaded}
+              <form method="POST" style={{ marginTop: "50px" }}>
+                <Input
+                  keyup={this.updateStateData}
+                  text="Name"
+                  type="text"
+                  id="username"
+                  placeholder="Name"
+                />
+                <Input
+                  keyup={this.updateStateData}
+                  text="Email Address"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <Input
+                  keyup={this.updateStateData}
+                  text="Comments"
+                  type="text"
+                  id="comment"
+                  placeholder="Comments"
+                />
+                <div style={{ margin: "3.5vh 20%" }}>
+                  <Captcha
+                    recaptchaLoaded={this.recaptchaLoaded}
                     verifyCallback={this.verifyCallback}
                   />
                 </div>
-                <button
-                  id="submitemail"
-                  type="submit"
-                  onClick={(e) => {
+                <Button
+                  onclickevent={(e) => {
                     this.sendEmail(e);
                   }}
-                  target="_blank"
-                  class="btn btn-default"
-                >
-                  Submit
-                </button>
+                  text="Submit"
+                  id="submitemail"
+                  type="submit"
+                />
               </form>
             </div>
             <div className="col l1 m1"></div>

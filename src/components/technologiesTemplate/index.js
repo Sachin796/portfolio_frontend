@@ -7,6 +7,7 @@ function TechTemplate({ className, src, figcaption }) {
         src={src}
         style={{ marginLeft: "30px" }}
         className="icondimensions"
+        alt="technologies"
       />
       <figcaption>{figcaption}</figcaption>
     </fig>

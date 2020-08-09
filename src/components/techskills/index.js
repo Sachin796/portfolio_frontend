@@ -15,17 +15,11 @@ import {
   programminglangfigcaption,
 } from "./images";
 import TechTemplate from "../technologiesTemplate/index";
-import API from "../../utils/index";
-
 class Techskills extends Component {
   constructor() {
     super();
 
     this.state = {};
-  }
-
-  componentDidMount() {
-    API.getTechSkills().then((data) => console.log(data));
   }
 
   render() {
@@ -42,10 +36,10 @@ class Techskills extends Component {
             <h3 id="techskills">
               TECH SKILLS <hr style={{ width: "10%" }} />
             </h3>
+            {/* <FrontEnd /> */}
             <div style={{ width: "100%" }}>
               <h5>FRONT END TECHNOLOGIES</h5>
               <div className="" style={{ height: "auto" }}>
-                {/* <FrontEnd /> */}
                 {frontendimages.map((imagesName, index) => {
                   return (
                     <TechTemplate
@@ -59,11 +53,10 @@ class Techskills extends Component {
               </div>
             </div>
             <div>
+              {/* <BackEnd /> */}
               <h5 className="col l12 m12 s12">BACK END TECHNOLOGIES</h5>
               <div className="" style={{ height: "auto" }}>
-                {/*  */}
                 <fig className="col l4 m12 s12"></fig>
-                {/* <BackEnd /> */}
                 {backendimages.map((imagesName, index) => {
                   return (
                     <TechTemplate
@@ -78,12 +71,10 @@ class Techskills extends Component {
               </div>
             </div>
             <div>
+              {/* <Database /> */}
               <h5 className="col l12 m12 s12">DATABASE AND DEPLOYMENT</h5>
               <div className="col l12 m12 s12" style={{ height: "auto" }}>
-                {/*  */}
                 <fig className="col l2 m12 s12"></fig>
-                {/* <Database /> */}
-
                 {databasedeploy.map((imagesName, index) => {
                   return (
                     <TechTemplate
@@ -97,12 +88,11 @@ class Techskills extends Component {
                 <fig className="col l4 m12 s12"></fig>
               </div>
             </div>
+            {/* <Programming /> */}
             <div>
               <h5 className="col l12 m12 s12">PROGRAMMING LANGUAGES</h5>
               <div className="col l12 m12 s12" style={{ height: "auto" }}>
-                {/*  */}
                 <fig className="col l4 m12 s12"></fig>
-                {/* <Programming /> */}
                 {proglanguages.map((imagesName, index) => {
                   return (
                     <TechTemplate
