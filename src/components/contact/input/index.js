@@ -7,11 +7,16 @@ const Input = (props) => (
     </label>
     <input
       type={props.type}
-      class="form-control"
+      class={props.classname}
       id={props.id}
       onKeyUp={props.keyup}
       placeholder={props.placeholder}
     />
+    <span
+      class="helper-text"
+      data-error="Please enter a valid email address"
+      data-success="Perfect !"
+    ></span>
   </div>
 );
 
