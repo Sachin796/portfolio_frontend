@@ -3,7 +3,7 @@ import FrontEnd from "./frontend";
 import BackEnd from "./backend";
 import Database from "./database";
 import Programming from "./programming";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import {
   frontendimages,
   frontendimages2,
@@ -44,7 +44,12 @@ class Techskills extends Component {
               TECH SKILLS <hr style={{ width: "10%" }} />
             </h3>
             {/* <FrontEnd /> */}
-            <div style={{ width: "100%" }}>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              style={{ width: "100%" }}
+            >
               <h5>FRONT END TECHNOLOGIES</h5>
               <div className="col l1 m1 s1" style={{ height: "auto" }}></div>
               <div className="" style={{ height: "auto" }}>
@@ -59,6 +64,7 @@ class Techskills extends Component {
                   );
                 })}
               </div>
+
               <CommonTemplate
                 marginTop="7vh"
                 imgType={frontendimages2}
@@ -66,7 +72,12 @@ class Techskills extends Component {
                 classname="col l2 m12 s12"
               />
             </div>
-            <div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+              data-aos-offset="300"
+            >
               {/* <BackEnd /> */}
               <h5 className="col l12 m12 s12">BACK END TECHNOLOGIES</h5>
               <CommonTemplate
@@ -76,7 +87,12 @@ class Techskills extends Component {
                 classname="col l2 m12 s12"
               />
             </div>
-            <div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="2000"
+              data-aos-offset="400"
+            >
               {/* <Database /> */}
               <h5 className="col l12 m12 s12">DATABASE</h5>
               <CommonTemplate
@@ -87,7 +103,12 @@ class Techskills extends Component {
               />
             </div>
             {/* <Deployment /> */}
-            <div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="3000"
+              data-aos-offset="500"
+            >
               <h5 className="col l12 m12 s12">DEPLOYMENT</h5>
               <CommonTemplate
                 marginTop="0px"
@@ -98,7 +119,12 @@ class Techskills extends Component {
             </div>
 
             {/* AWS */}
-            <div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="3000"
+              data-aos-offset="600"
+            >
               <h5 className="col l12 m12 s12">AWS</h5>
               <CommonTemplate
                 marginTop="0px"

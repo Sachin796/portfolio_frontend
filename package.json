@@ -5,8 +5,10 @@
   "dependencies": {
     "@sweetalert/with-react": "^0.1.1",
     "@testing-library/react": "^10.4.7",
+    "aos": "^2.3.4",
     "axios": "^0.19.2",
     "react": "^16.6.3",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.6.3",
     "react-ga": "^2.7.0",
     "react-particles-js": "^2.7.0",

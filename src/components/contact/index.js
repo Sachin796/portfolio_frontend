@@ -137,6 +137,7 @@ class Contact extends Component {
                   type="text"
                   id="username"
                   placeholder="Name"
+                  classname="form-control"
                 />
                 <Input
                   keyup={this.updateStateData}
@@ -144,6 +145,7 @@ class Contact extends Component {
                   type="email"
                   id="email"
                   placeholder="Email"
+                  classname="validate"
                 />
                 <Input
                   keyup={this.updateStateData}
@@ -151,6 +153,7 @@ class Contact extends Component {
                   type="text"
                   id="comment"
                   placeholder="Comments"
+                  classname="form-control"
                 />
                 <div style={{ margin: "3.5vh 20%" }}>
                   <Captcha
