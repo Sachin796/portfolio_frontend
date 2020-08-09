@@ -3,17 +3,13 @@ import { SocialIcon } from "react-social-icons";
 
 const Icon = (props) => (
   <>
+    {console.log(props)}
     <SocialIcon
-      network="github"
+      network={props.network}
       target="_blank"
-      url="https://github.com/Sachin796/Worktopia"
+      url={props.url}
       rel="noopener noreferrer"
-      style={{
-        height: 40,
-        width: 40,
-        marginLeft: "40px",
-        marginRight: "10px",
-      }}
+      style={props.style}
     />
     {props.text}
   </>
