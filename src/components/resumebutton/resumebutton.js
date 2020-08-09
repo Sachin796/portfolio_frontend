@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import API from "../../utils/index";
 
 function ResumeButton(props) {
@@ -10,6 +10,7 @@ function ResumeButton(props) {
           API.getResume();
         }}
         target="_blank"
+        rel="noopener noreferrer"
         id="resumebtn"
         data-testid="button"
       >

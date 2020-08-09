@@ -18,6 +18,7 @@ function AboutMe() {
               borderRadius: "50%",
               marginTop: "10px",
             }}
+            alt="profile image"
           />
         </div>
         <div className="l4 m6 s12" style={{ marginTop: "40px" }}>

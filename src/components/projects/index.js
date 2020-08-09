@@ -1,7 +1,13 @@
 import React from "react";
-import { SocialIcon } from "react-social-icons";
-
+import SocialIconDiv from "./socialicon";
 function Projects() {
+  const indStyle = {
+    height: 40,
+    width: 40,
+    marginLeft: "40px",
+    marginRight: "10px",
+  };
+
   return (
     <>
       <div className="row" id="projectRow">
@@ -23,6 +29,7 @@ function Projects() {
                   src={process.env.REACT_APP_PROJECTIMG1}
                   height="250px"
                   width="370px"
+                  alt="project image"
                 />
               </div>
               <div className="col l5 m12 s12 center">
@@ -41,32 +48,20 @@ function Projects() {
                   </p>
                   <p>Backend :- SEQUELIZE / MYSQL </p>
                 </div>
-
-                <div style={{ marginTop: "55px" }}>
-                  <SocialIcon
+                <div style={{ marginBottom: "40x", marginTop: "55px" }}>
+                  <SocialIconDiv
                     network="github"
-                    target="_blank"
                     url="https://github.com/Sachin796/Worktopia"
-                    style={{
-                      height: 40,
-                      width: 40,
-                      marginLeft: "40px",
-                      marginRight: "10px",
-                    }}
+                    style={indStyle}
+                    text="Github"
                   />
-                  GitHub
-                  <SocialIcon
+
+                  <SocialIconDiv
                     network="vsco"
-                    target="_blank"
                     url="https://frozen-spire-07685.herokuapp.com/"
-                    style={{
-                      height: 40,
-                      width: 40,
-                      marginLeft: "40px",
-                      marginRight: "10px",
-                    }}
+                    style={indStyle}
+                    text="Live"
                   />
-                  Live
                 </div>
               </div>
             </div>
@@ -82,6 +77,7 @@ function Projects() {
                   src={process.env.REACT_APP_PROJECTIMG2}
                   height="250px"
                   width="400px"
+                  alt="project image"
                 />
               </div>
               <div className="col l5  m12 s12 center">
@@ -101,30 +97,18 @@ function Projects() {
                   <p>Backend : MYSQL </p>
                 </div>
                 <div style={{ marginBottom: "40x", marginTop: "55px" }}>
-                  <SocialIcon
+                  <SocialIconDiv
                     network="github"
-                    target="_blank"
                     url="https://github.com/Sachin796/Project-2"
-                    style={{
-                      height: 40,
-                      width: 40,
-                      marginLeft: "40px",
-                      marginRight: "10px",
-                    }}
+                    style={indStyle}
+                    text="Github"
                   />
-                  GitHub
-                  <SocialIcon
+                  <SocialIconDiv
                     network="vsco"
-                    target="_blank"
                     url="https://financr-6d.herokuapp.com/"
-                    style={{
-                      height: 40,
-                      width: 40,
-                      marginLeft: "40px",
-                      marginRight: "10px",
-                    }}
+                    style={indStyle}
+                    text="Live"
                   />
-                  Live
                 </div>
               </div>
             </div>

@@ -7,6 +7,7 @@ const Button = (props) => (
     onClick={props.onclickevent}
     target="_blank"
     class="btn btn-default"
+    rel="noopener noreferrer"
   >
     {props.text}
   </button>

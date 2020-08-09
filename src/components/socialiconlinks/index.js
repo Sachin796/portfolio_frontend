@@ -1,25 +1,17 @@
 import React from "react";
-
+import linkdata from "./linkdata";
 function Links() {
   return (
     <div className="col l6 s12">
       <section id="links">
-        <a
-          href="https://github.com/Sachin796/PortfolioWebsite"
-          target="_blank"
-          className="fa fa-github"
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/sachin-javeri-42436280/"
-          target="_blank"
-          className="fa fa-linkedin"
-        ></a>
-        <a
-          href="https://twitter.com/Sachin30991736"
-          target="_blank"
-          className="fa fa-twitter"
-        ></a>
-        <a href="#" className="fa fa-envelope"></a>
+        {linkdata.map((data) => (
+          <a
+            href={data.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={data.className}
+          ></a>
+        ))}
       </section>
     </div>
   );

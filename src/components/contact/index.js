@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import swal from "sweetalert";
 import Captcha from "./captcha";
 import API from "../../utils/index";
 import Button from "./button";
@@ -15,7 +16,13 @@ class Contact extends Component {
     };
     this.sendEmail = this.sendEmail.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
+    this.clearFields = this.clearFields.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
   }
+
+  recaptchaLoaded = () => {
+    console.log("Recaptcha loaded");
+  };
 
   verifyCallback = () => {
     this.setState({
@@ -29,7 +36,7 @@ class Contact extends Component {
       this.setState({
         email: event.target.value,
       });
-    } else if (event.target.id === "name") {
+    } else if (event.target.id === "username") {
       this.setState({
         name: event.target.value,
       });
@@ -40,18 +47,43 @@ class Contact extends Component {
     }
   };
 
+  clearFields() {
+    this.setState({
+      email: "",
+      name: "",
+      comment: "",
+      captchaVerified: false,
+    });
+    document.getElementById("username").value = "";
+    document.getElementById("comment").value = "";
+    document.getElementById("email").value = "";
+  }
+
   sendEmail = async (event) => {
     event.preventDefault();
-    if (this.state.captchaVerified) {
-      const response = await API.sendEmail(this.state);
-      if (response.status === 200) {
-        alert("Thank you for the email");
-        document.getElementById("email").value = "";
+    if (
+      this.state.comment != "" &&
+      this.state.email != "" &&
+      this.state.name != ""
+    ) {
+      if (this.state.captchaVerified) {
+        const response = await API.sendEmail(this.state);
+        if (response.status === 200) {
+          swal("Thanks!", "Mail sent sucessfully !", "success");
+          this.clearFields();
+        } else {
+          swal(
+            "Oops!",
+            "Error with service... Please refresh the page.",
+            "error"
+          );
+        }
       } else {
-        alert("Error");
+        swal("Oops!", "Please complete the captcha to proceed", "warning");
       }
     } else {
-      alert("Please verify captcha");
+      swal("Empty Input!", "Please fill all details", "error");
+      this.clearFields();
     }
   };
 
@@ -98,12 +130,12 @@ class Contact extends Component {
           <div className="col l6 m6 s12">
             <div className="col l1 m1"></div>
             <div className="col l8 m8 s12">
-              <form method="POST">
+              <form method="POST" style={{ marginTop: "50px" }}>
                 <Input
                   keyup={this.updateStateData}
                   text="Name"
                   type="text"
-                  id="name"
+                  id="username"
                   placeholder="Name"
                 />
                 <Input
@@ -120,7 +152,7 @@ class Contact extends Component {
                   id="comment"
                   placeholder="Comments"
                 />
-                <div style={{ margin: "2vh 20%" }}>
+                <div style={{ margin: "3.5vh 20%" }}>
                   <Captcha
                     recaptchaLoaded={this.recaptchaLoaded}
                     verifyCallback={this.verifyCallback}
