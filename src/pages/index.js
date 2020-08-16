@@ -11,8 +11,8 @@ import ReactGA from "react-ga";
 require("dotenv").config();
 
 export const initializeReactGA = () => {
-  ReactGA.initialize(process.env.GOOGLE_ANALYTICS_KEYS);
-  ReactGA.pageview("./");
+  ReactGA.initialize(`${process.env.GOOGLE_ANALYTICS_KEYS}`);
+  ReactGA.pageview("./index");
 };
 
 export const logPageView = () => {
