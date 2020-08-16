@@ -12,12 +12,12 @@ require("dotenv").config();
 
 export const initializeReactGA = () => {
   ReactGA.initialize(process.env.GOOGLE_ANALYTICS_KEYS);
-  ReactGA.pageview("./");
+  ReactGA.pageview("./index.js");
 };
 
 export const logPageView = () => {
   ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.pageview(window.location.pathname);
 };
 
 class MainPage extends Component {
