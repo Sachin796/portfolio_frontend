@@ -12,7 +12,7 @@ require("dotenv").config();
 
 export const initializeReactGA = () => {
   ReactGA.initialize(`${process.env.GOOGLE_ANALYTICS_KEYS}`);
-  ReactGA.pageview("./");
+  ReactGA.pageview("./main");
 };
 
 export const logPageView = () => {
