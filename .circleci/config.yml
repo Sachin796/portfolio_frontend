@@ -5,6 +5,11 @@ workflows:
   node-tests:
     jobs:
       - node/test
-  project-build:
-    jobs:
-      - node/run-script build
+      - build
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:202007-01
+      steps:
+        - checkout
+        - run: npm run-script build
