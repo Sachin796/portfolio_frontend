@@ -72,12 +72,7 @@ class Techskills extends Component {
                 classname="col l2 m12 s12"
               />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              data-aos-offset="300"
-            >
+            <div data-aos="fade-up" data-aos-duration="2000">
               {/* <BackEnd /> */}
               <h5 className="col l12 m12 s12">BACK END TECHNOLOGIES</h5>
               <CommonTemplate
@@ -87,12 +82,7 @@ class Techskills extends Component {
                 classname="col l2 m12 s12"
               />
             </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="2000"
-              data-aos-offset="400"
-            >
+            <div data-aos="fade-up" data-aos-duration="2000">
               {/* <Database /> */}
               <h5 className="col l12 m12 s12">DATABASE</h5>
               <CommonTemplate
@@ -103,12 +93,7 @@ class Techskills extends Component {
               />
             </div>
             {/* <Deployment /> */}
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="3000"
-              data-aos-offset="500"
-            >
+            <div data-aos="fade-up" data-aos-duration="2000">
               <h5 className="col l12 m12 s12">DEPLOYMENT</h5>
               <CommonTemplate
                 marginTop="0px"
@@ -119,12 +104,7 @@ class Techskills extends Component {
             </div>
 
             {/* AWS */}
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              data-aos-delay="3000"
-              data-aos-offset="600"
-            >
+            <div data-aos="fade-up" data-aos-duration="2000">
               <h5 className="col l12 m12 s12">AWS</h5>
               <CommonTemplate
                 marginTop="0px"
