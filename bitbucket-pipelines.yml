@@ -9,6 +9,8 @@ pipelines:
           image: node:10.15.3
           caches:
             - node
+          script:
+            - npm install
       - step:
           name: Build and Test
           image: python:3.8
