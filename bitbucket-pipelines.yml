@@ -1,0 +1,21 @@
+options:
+  docker: true
+
+image: node:10.15.3
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build and Test
+          caches:
+            - node
+          script:
+            - npm install awscli
+            - eval $(aws ecr get-login --region ${AWS_DEFAULT_REGION} --no-include-email)
+            # Tag and push to AWS ECR (docker repository)
+            - export BUILD_ID=$BITBUCKET_BRANCH_$BITBUCKET_COMMIT_$BITBUCKET_BUILD_NUMBER
+            - docker build -t ${AWS_REGISTRY_URL}:$BUILD_ID .
+            - docker push ${AWS_REGISTRY_URL}:$BUILD_ID
+            - docker tag ${AWS_REGISTRY_URL}:$BUILD_ID ${AWS_REGISTRY_URL}:latest
+            - docker push ${AWS_REGISTRY_URL}:latest
