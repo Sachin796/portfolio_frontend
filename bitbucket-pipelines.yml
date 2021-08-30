@@ -1,16 +1,18 @@
 options:
   docker: true
 
-image: node:10.15.3
-       python:3.8
-
 pipelines:
   branches:
     master:
       - step:
-          name: Build and Test
+          name: Install nodejs
+          image: node:10.15.3
           caches:
             - node
+      - step:
+          name: Build and Test
+          image: python:3.8
+          caches:
             - pip
           script:
             - pip install awscli
