@@ -11,7 +11,7 @@ pipelines:
           caches:
             - node
           script:
-            - npm install aws-sdk
+            - npm install awscli
             - eval $(aws ecr get-login --region ${AWS_DEFAULT_REGION} --no-include-email)
             # Tag and push to AWS ECR (docker repository)
             - export BUILD_ID=$BITBUCKET_BRANCH_$BITBUCKET_COMMIT_$BITBUCKET_BUILD_NUMBER
