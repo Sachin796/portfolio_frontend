@@ -1,6 +1,6 @@
 import React from "react";
 import linkdata from "./linkdata";
-function Links() {
+export const SiteLinks = () => {
   return (
     <div className="col l6 s12">
       <section id="links">
@@ -15,6 +15,4 @@ function Links() {
       </section>
     </div>
   );
-}
-
-export default Links;
+};

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import swal from "sweetalert";
 import Captcha from "./captcha";
 import API from "../../utils/index";
-import Button from "./button";
+import {Button} from "./button";
 import Input from "./input";
 import Details from "./details";
 class Contact extends Component {
@@ -62,9 +62,9 @@ class Contact extends Component {
   sendEmail = async (event) => {
     event.preventDefault();
     if (
-      this.state.comment != "" &&
-      this.state.email != "" &&
-      this.state.name != ""
+      this.state.comment !== "" &&
+      this.state.email !== "" &&
+      this.state.name !== ""
     ) {
       if (this.state.captchaVerified) {
         const response = await API.sendEmail(this.state);
@@ -100,15 +100,15 @@ class Contact extends Component {
           }}
         >
           <div className="col l6 m6 s12">
-            <div className="col l12 m12 s12" style={{ height: "auto" }}>
+            <div className="col l12 m12 s12" style={{height: "auto"}}>
               <h4
                 id="justcolor"
                 className="center"
-                style={{ paddingTop: "25px" }}
+                style={{paddingTop: "25px"}}
               >
                 Contact
               </h4>
-              <hr style={{ width: "7%", marginBottom: "15px" }}></hr>
+              <hr style={{width: "7%", marginBottom: "15px"}}></hr>
             </div>
             <Details
               classname="col l12 m12 s12"
@@ -130,7 +130,7 @@ class Contact extends Component {
           <div className="col l6 m6 s12">
             <div className="col l1 m1"></div>
             <div className="col l8 m8 s12">
-              <form method="POST" style={{ marginTop: "50px" }}>
+              <form method="POST" style={{marginTop: "50px"}}>
                 <Input
                   keyup={this.updateStateData}
                   text="Name"
@@ -155,7 +155,7 @@ class Contact extends Component {
                   placeholder="Comments"
                   classname="form-control"
                 />
-                <div style={{ margin: "3.5vh 20%" }}>
+                <div style={{margin: "3.5vh 20%"}}>
                   <Captcha
                     recaptchaLoaded={this.recaptchaLoaded}
                     verifyCallback={this.verifyCallback}

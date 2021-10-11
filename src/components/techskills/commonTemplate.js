@@ -1,11 +1,11 @@
 import React from "react";
 import TechTemplate from "../technologiesTemplate";
 
-function CommonTemplate(props) {
+const CommonTemplate = (props) => {
   return (
     <div
       className="col l12 m12 s12"
-      style={{ height: "auto", marginTop: `${props.marginTop}` }}
+      style={{height: "auto", marginTop: `${props.marginTop}`}}
     >
       <fig className={props.classname}></fig>
       {props.imgType.map((imagesName, index) => {
@@ -21,6 +21,6 @@ function CommonTemplate(props) {
       <fig className="col l4 m12 s12"></fig>
     </div>
   );
-}
+};
 
 export default CommonTemplate;

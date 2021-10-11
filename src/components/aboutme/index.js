@@ -1,13 +1,13 @@
 import React from "react";
-import ResumeButton from "../resumebutton/resumebutton";
+import {ResumeButton} from "../resumebutton/resumebutton";
 
-function AboutMe() {
+export const AboutMe = () => {
   return (
     <div className="row center" id="aboutRow">
       <div id="cardRow">
-        <div className="center" style={{ marginTop: "30px" }}>
+        <div className="center" style={{marginTop: "30px"}}>
           <h4>ABOUT ME</h4>
-          <hr style={{ width: "5%" }}></hr>
+          <hr style={{width: "5%"}}></hr>
         </div>
         <div className="image" id="about">
           <img
@@ -18,13 +18,13 @@ function AboutMe() {
               borderRadius: "50%",
               marginTop: "10px",
             }}
-            alt="profile image"
+            alt="profile"
           />
         </div>
-        <div className="l4 m6 s12" style={{ marginTop: "40px" }}>
+        <div className="l4 m6 s12" style={{marginTop: "40px"}}>
           <p>
             My name is Sachin Jhaveri and I am a{" "}
-            <span style={{ color: "orange" }}>FULL STACK DEVELOPER</span> in
+            <span style={{color: "orange"}}>FULL STACK DEVELOPER</span> in
             Toronto.
           </p>
           <p className="center">
@@ -39,6 +39,4 @@ function AboutMe() {
       </div>
     </div>
   );
-}
-
-export default AboutMe;
+};

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import NavItems from "../components/nav";
-import Intro from "../components/intro";
-import AboutMe from "../components/aboutme";
+import React, {Component} from "react";
+import {NavItems} from "../components/nav";
+import {Intro} from "../components/intro";
+import {AboutMe} from "../components/aboutme";
 import Contact from "../components/contact";
-import { BrowserRouter as Router } from "react-router-dom";
-import Footer from "../components/footer";
-import Projects from "../components/projects";
+import {BrowserRouter as Router} from "react-router-dom";
+import {Footer} from "../components/footer";
+import {Projects} from "../components/projects";
 import Techskills from "../components/techskills";
 import ReactGA from "react-ga";
 require("dotenv").config();
@@ -16,7 +16,7 @@ export const initializeReactGA = () => {
 };
 
 export const logPageView = () => {
-  ReactGA.set({ page: window.location.pathname });
+  ReactGA.set({page: window.location.pathname});
   ReactGA.pageview(window.location.pathname + window.location.search);
 };
 

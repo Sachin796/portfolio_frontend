@@ -1,6 +1,6 @@
 import React from "react";
 import SocialIconDiv from "./socialicon";
-function Projects() {
+export const Projects = () => {
   const indStyle = {
     height: 40,
     width: 40,
@@ -11,11 +11,11 @@ function Projects() {
   return (
     <>
       <div className="row" id="projectRow">
-        <div style={{ height: "auto" }}>
-          <h4 id="justcolor" className="center" style={{ marginTop: "10px" }}>
+        <div style={{height: "auto"}}>
+          <h4 id="justcolor" className="center" style={{marginTop: "10px"}}>
             PROJECTS
           </h4>
-          <hr style={{ width: "7%", marginBottom: "55px" }}></hr>
+          <hr style={{width: "7%", marginBottom: "55px"}}></hr>
 
           <div className="project1div" id="project">
             <div
@@ -29,26 +29,26 @@ function Projects() {
                   src={process.env.REACT_APP_PROJECTIMG1}
                   height="250px"
                   width="370px"
-                  alt="project image"
+                  alt="project"
                 />
               </div>
               <div className="col l5 m12 s12 center">
                 <div className="center">WORKTOPIA</div>
-                <h5 style={{ marginBottom: "20px" }}>
+                <h5 style={{marginBottom: "20px"}}>
                   &ldquo; An application where users can either post office
                   spaces for rent or search for work spaces to rent. &rdquo;
                 </h5>
-                <div style={{ color: "rgb(245, 176, 48)" }}>
+                <div style={{color: "rgb(245, 176, 48)"}}>
                   Technologies Used
                 </div>
-                <div style={{ fontWeight: "bold" }}>
+                <div style={{fontWeight: "bold"}}>
                   <p>Front End :- HTML / CSS / BOOTSTRAP / REACT </p>
                   <p>
                     Server Side :- MOMENT / EXPRESS / NODE / AWS (S3 bucket)
                   </p>
                   <p>Backend :- SEQUELIZE / MYSQL </p>
                 </div>
-                <div style={{ marginBottom: "40x", marginTop: "55px" }}>
+                <div style={{marginBottom: "40x", marginTop: "55px"}}>
                   <SocialIconDiv
                     network="github"
                     url="https://github.com/Sachin796/Worktopia"
@@ -77,26 +77,26 @@ function Projects() {
                   src={process.env.REACT_APP_PROJECTIMG2}
                   height="250px"
                   width="400px"
-                  alt="project image"
+                  alt="project"
                 />
               </div>
               <div className="col l5  m12 s12 center">
                 <div className="center ">FINANCR</div>
 
-                <h5 style={{ marginBottom: "20px" }}>
+                <h5 style={{marginBottom: "20px"}}>
                   &ldquo; Financr is an app that caters to the needs of the
                   financially savy and allows them to make well informed
                   decisions about their purchases &rdquo;
                 </h5>
-                <div style={{ color: "rgb(245, 176, 48)" }}>
+                <div style={{color: "rgb(245, 176, 48)"}}>
                   Technologies Used
                 </div>
-                <div style={{ fontWeight: "bold" }}>
+                <div style={{fontWeight: "bold"}}>
                   <p>Front End :- HTML / CSS / HANDLEBARS / MATERIALIZE</p>
                   <p>Server Side :- LEAFLET / EXPRESS / NODE</p>
                   <p>Backend : MYSQL </p>
                 </div>
-                <div style={{ marginBottom: "40x", marginTop: "55px" }}>
+                <div style={{marginBottom: "40x", marginTop: "55px"}}>
                   <SocialIconDiv
                     network="github"
                     url="https://github.com/Sachin796/Project-2"
@@ -117,6 +117,4 @@ function Projects() {
       </div>
     </>
   );
-}
-
-export default Projects;
+};

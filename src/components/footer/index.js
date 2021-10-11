@@ -1,14 +1,14 @@
 import React from "react";
 
-import Links from "../socialiconlinks";
-function Footer() {
+import {SiteLinks} from "../socialiconlinks";
+export const Footer = () => {
   return (
     <div>
       <footer className="page-footer">
         <div className="container center">
           <div className="row">
             <div className="col l6 s12">
-              <Links></Links>
+              <SiteLinks></SiteLinks>
               <a className="grey-text text-lighten-3" href="#home">
                 Home |
               </a>
@@ -34,6 +34,4 @@ function Footer() {
       </footer>
     </div>
   );
-}
-
-export default Footer;
+};

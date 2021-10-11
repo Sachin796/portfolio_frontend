@@ -1,5 +1,5 @@
 import React from "react";
-function NavItems() {
+export const NavItems = () => {
   return (
     <>
       <div className="navbar-fixed">
@@ -48,6 +48,4 @@ function NavItems() {
       </ul>
     </>
   );
-}
-
-export default NavItems;
+};

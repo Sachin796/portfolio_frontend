@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = (props) => (
+export const Button = (props) => (
   <button
     id={props.type}
     type={props.type}
@@ -12,5 +12,3 @@ const Button = (props) => (
     {props.text}
   </button>
 );
-
-export default Button;

@@ -1,8 +1,8 @@
 import React from "react";
 import Typed from "react-typed";
-import Links from "../socialiconlinks";
+import {SiteLinks} from "../socialiconlinks";
 
-function Intro() {
+export const Intro = () => {
   return (
     <div className="row" id="home">
       <div id="introDiv" className="center-align">
@@ -23,10 +23,8 @@ function Intro() {
           <h6>efficient,reliable web application with </h6>
           <h6>great user experience .</h6>
         </section>
-        <Links></Links>
+        <SiteLinks></SiteLinks>
       </div>
     </div>
   );
-}
-
-export default Intro;
+};

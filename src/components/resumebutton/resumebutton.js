@@ -1,9 +1,9 @@
 import React from "react";
 import API from "../../utils/index";
 
-function ResumeButton(props) {
+export const ResumeButton = (props) => {
   return (
-    <div style={{ marginTop: "25px" }}>
+    <div style={{marginTop: "25px"}}>
       <button
         type="submit"
         onClick={() => {
@@ -18,6 +18,4 @@ function ResumeButton(props) {
       </button>
     </div>
   );
-}
-
-export default ResumeButton;
+};
