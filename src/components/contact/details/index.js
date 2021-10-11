@@ -1,6 +1,6 @@
 import React from "react";
 
-const Details = (props) => (
+export const Details = (props) => (
   <div className={props.classname}>
     <p>{props.text}</p>
     <p>
@@ -8,5 +8,3 @@ const Details = (props) => (
     </p>
   </div>
 );
-
-export default Details;

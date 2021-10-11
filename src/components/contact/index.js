@@ -4,7 +4,7 @@ import Captcha from "./captcha";
 import API from "../../utils/index";
 import {Button} from "./button";
 import Input from "./input";
-import Details from "./details";
+import {Details} from "./details";
 class Contact extends Component {
   constructor() {
     super();

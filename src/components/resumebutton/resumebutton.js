@@ -6,6 +6,7 @@ export const ResumeButton = (props) => {
     <div style={{marginTop: "25px"}}>
       <button
         type="submit"
+        id="resumebtn"
         onClick={() => {
           API.getResume();
         }}
