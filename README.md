@@ -1,6 +1,6 @@
 ### Portfolio Website Frontend
 
-http://portfoliowebsitereacthosting.s3-website-us-east-1.amazonaws.com/
+http://www.sachinjaveri.info/
 
 ## Overview
 
