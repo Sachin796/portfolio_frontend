@@ -24,11 +24,25 @@ describe("Test Contact Details Component", () => {
     );
   });
 
+  it("Should Not Render Empty Paragraph Text", () => {
+    let expectedText = "";
+    expect(component.find(".dummyClass").children().first().text()).not.toBe(
+      expectedText
+    );
+  });
+
   it("Should Render Correct Link Text", () => {
     let expectedText = "Dummy Link Text";
     expect(
       component.find(".dummyClass").children().at(1).children().text()
     ).toEqual(expectedText);
+  });
+
+  it("Should Not Render Empty Link Text", () => {
+    let expectedText = "";
+    expect(
+      component.find(".dummyClass").children().at(1).children().text()
+    ).not.toBe(expectedText);
   });
 
   it("Should Test the Href Prop of <a /> tag", () => {
