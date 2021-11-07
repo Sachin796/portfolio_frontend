@@ -14,6 +14,7 @@ beforeEach(() => {
 });
 
 describe("Testing Input Component", () => {
+  let expectedObj = {}
   it("Should display proper text", () => {
     expect(component.find(".form-group").children().at(0).text()).toEqual(
       "Test Input Text"
@@ -28,7 +29,7 @@ describe("Testing Input Component", () => {
     const mountedcomponent = mount(<Input />);
     const inputElement = mountedcomponent.find("input");
     inputElement.instance().value = "Input test text";
-    inputElement.simulate("keyup");
+    // inputElement.simulate("change");
     expect(inputElement.instance().value).toEqual("Input test text");
   });
 });

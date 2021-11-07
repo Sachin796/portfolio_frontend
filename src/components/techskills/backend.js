@@ -1,21 +1,22 @@
-import React, { Component } from "react";
+import React, {useEffect, useState} from "react";
 import TechTemplate from "../technologiesTemplate/index";
 import API from "../../utils/index";
-class BackEnd extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
 
-  componentDidMount() {
-    API.getBackEndSkills().then((data) => this.setState({ data }));
-  }
+export const BackEnd = () => {
+  const [state, setState] = useState({data: undefined});
 
-  render() {
-    return (
+  useEffect(() => {
+    API.getBackEndSkills().then((data) => {
+      console.log(data);
+      setState({data});
+    });
+  });
+
+  return (
+    <>
       <>
-        {this.state.data
-          ? this.state.data.map((data) => {
+        {state.data
+          ? state.data.map((data) => {
               return (
                 <TechTemplate
                   id={data.caption}
@@ -27,8 +28,6 @@ class BackEnd extends Component {
             })
           : null}
       </>
-    );
-  }
-}
-
-export default BackEnd;
+    </>
+  );
+};

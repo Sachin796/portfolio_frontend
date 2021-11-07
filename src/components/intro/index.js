@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Typed from "react-typed";
 import {SiteLinks} from "../socialiconlinks";
 
 export const Intro = () => {
+  useEffect(() => console.log("Component is called"));
+
   return (
     <div className="row" id="home">
       <div id="introDiv" className="center-align">
